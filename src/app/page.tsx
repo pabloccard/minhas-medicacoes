@@ -4,14 +4,16 @@ import img from '../../public/pimple-patches-pana.svg'
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <div className={styles.container}>
       <main className={styles.hero}>
-        <div className={styles.content}>
+        <div className={styles.heroContent}>
           <h1>
             Simplifique o <span>gerenciamento</span> de suas medicações
           </h1>
 
-          <Image src={img} alt="" width={280} />
+          <div className={styles.imageBlur}>
+            <Image src={img} alt="" width={280} />
+          </div>
 
           <p>
             Agende suas medicações com facilidade e nunca mais perca uma dose,
