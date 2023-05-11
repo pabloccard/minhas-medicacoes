@@ -1,0 +1,138 @@
+.container {
+    max-width: calc(1120px + 4rem);
+    margin: 0 auto;
+    padding: 4rem 2rem 8.5rem; 
+}
+
+.selectedDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.selectedDate strong {
+    color: var(--gray-200);
+    font-size: 3.5rem;
+}
+
+.selectedDate div {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectedDate div span {
+    color: var(--gray-300);
+    text-transform: capitalize;
+    line-height: 1.6;
+}
+
+.scheduledDayList {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.scheduledDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    width: 4.75rem;
+    height: 5.25rem;
+
+    background: var(--gray-500);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: all ease-in-out 0.2s;
+    position: relative;
+}
+
+.scheduledDay.active::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background: var(--green-500);
+    filter: blur(20px);
+
+    z-index: -100;
+}
+
+.scheduledDay strong {
+    text-transform: uppercase;
+    color: var(--gray-300);
+}
+
+.active {
+    background: var(--green-500); 
+    transform: translateY(-10%);
+}
+
+.scheduledDay.active strong {
+    color: var(--white);
+}
+
+.scheduledTimeContainer {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 3rem;
+}
+
+.scheduledTimeContainer table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+.scheduledTimeContainer table th {
+    background-color: var(--gray-500);
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+    color: var(--gray-300);
+    font-size: 0.685rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.scheduledTimeContainer table th:first-child {
+    border-top-left-radius: 8px;
+}
+.scheduledTimeContainer table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.scheduledTimeContainer table td {
+    background-color: var(--gray-500);
+    color: var(--gray-200);
+    padding: 0.875rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.scheduledTimeContainer table td:first-child {
+    padding-left: 1.5rem;  
+}
+
+.scheduledTimeContainer table td:nth-child(2) {
+    color: var(--white);
+}
+
+.scheduledTimeContainer table td:last-child {
+    padding-right: 0.5rem;
+    color: #D1B86C;
+}
