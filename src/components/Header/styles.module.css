@@ -48,9 +48,6 @@
     color: var(--green-500);
 }
 
-
-
-
 @media(min-width:768px) {
     .container {
         position: static;
@@ -83,8 +80,6 @@
     .link span {
         display: none;
     }
-
-    
 
     .link.active {
         color: var(--gray-200);

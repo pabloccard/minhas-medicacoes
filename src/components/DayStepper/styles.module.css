@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 10rem;
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    background: #212121;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0;
+
+    color: var(--green-600);
+    line-height: 0;
+    font-size: 1rem;
+
+
+}
+
+.value{
+    font-weight: bold;
+    color: var(--white);
+}

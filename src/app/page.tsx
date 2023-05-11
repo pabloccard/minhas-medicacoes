@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import img from '../../public/pimple-patches-pana.svg'
+import { Dialog } from '@/components/Dialog'
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             seja o herói da sua saúde!
           </p>
 
-          <button>AGENDAR AGORA</button>
+          <Dialog />
         </div>
       </main>
     </div>

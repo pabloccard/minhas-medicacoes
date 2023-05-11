@@ -30,22 +30,6 @@
   text-align: center;
 }
 
-.heroContent button {
-  padding: 0.875rem 1.5rem;
-  font-weight: bold;
-  background: var(--green-600);
-  border: 0;
-  border-radius: 999px;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.heroContent button:hover {
-  background: var(--green-500);
-
-  transition: background-color 0.2s ease-in-out;
-}
-
 .heroContent image {
   width: 220px;
 }
@@ -92,24 +76,24 @@
     position: relative;
   }
 
-  .content {
+  .heroContent {
     display: block;
     width: calc(100% - 21rem);
   }
 
-  .content h1 {
+  .heroContent h1 {
     text-align: left;
     font-size: 2.675rem;
     margin-bottom: 0.75rem;
   }
 
-  .content p {
+  .heroContent p {
     font-size: 1.25rem;
     text-align: left;
     margin-bottom: 2.5rem;
   }
 
-  .content img {
+  .imageBlur {
     position: absolute;
     right: 0;
     top: 50%;

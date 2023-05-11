@@ -1,0 +1,92 @@
+.fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.label {
+    color: var(--gray-300);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.fieldset input {
+    background: #212121;
+    border: 0;
+    height: 2.75rem;
+    padding-inline: 1rem;
+
+    border-radius: 6px;
+    color: var(--gray-200);
+    width: 11rem;
+}
+
+
+.fieldset input[type="text"]::placeholder {
+    color: var(--gray-300);
+    filter: brightness(70%);
+}
+
+.fieldset input[type='time']::-webkit-calendar-picker-indicator,
+.fieldset input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(100%) brightness( 50%);
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+.controls button {
+    height: 38px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.controls button:first-child {
+    background: var(--gray-400);
+    color: var(--gray-300);
+    filter: brightness(80%);
+}
+
+.controls button:last-child {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    filter: brightness(100%);
+ 
+    grid-column: 2;
+}
+
+.radioRoot {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.radioItem {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: color ease 0.2s, background-color ease 0.2s;
+    background: #212121;
+    color: var(--green-600);
+
+}
+
+.radioItem[data-state='checked'] {
+    background: var(--green-600);
+    color: var(--gray-100);
+}
