@@ -41,10 +41,30 @@
 }
 
 .scheduledDayList {
-    margin-top: 4rem;
+    padding-block: 4.25rem;
+}
+
+.scheduledDayList.activeSlide {
+    width: 100vw;
+    overflow: hidden;
+    padding-left: 2rem;
+    margin-left: -2rem;
+    position: relative;
+    
+    padding-right: 2rem;
+}
+
+.slider {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+}
+
+
+.slider.activeSlide {
+    justify-content: unset;
+    gap: unset;
+    /* overflow: visible !important; */
 }
 
 .scheduledDay {
@@ -56,13 +76,14 @@
 
     width: 4.75rem;
     height: 5.25rem;
+    padding: 2rem;
 
     background: var(--gray-500);
     border: 0;
     border-radius: 6px;
     cursor: pointer;
 
-    transition: all ease-in-out 0.2s;
+    /* transition: all ease-in-out 0.2s; */
     position: relative;
 }
 
@@ -100,7 +121,6 @@
     width: 100%;
     overflow: auto;
     white-space: nowrap;
-    margin-top: 3rem;
 }
 
 .scheduledTimeContainer table {

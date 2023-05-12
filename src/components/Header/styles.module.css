@@ -2,7 +2,8 @@
     width: 100%;
     position: fixed;
     bottom: 0;
-    background: var(--gray-500);            
+    background: var(--gray-500);        
+    z-index: 200;    
 }
 
 .logo {
