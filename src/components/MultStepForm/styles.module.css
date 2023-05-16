@@ -7,25 +7,28 @@
 }
 
 .label {
-    color: var(--gray-300);
+    color: var(--base-sidebar-label);
     text-align: center;
 }
 
 .fieldset input {
-    background: #212121;
+    background: var(--base-input);
     border: 0;
     height: 2.75rem;
     padding-inline: 1rem;
 
     border-radius: 6px;
-    color: var(--gray-200);
+    color: var(--base-title);
     width: 11rem;
 }
 
 
 .fieldset input[type="text"]::placeholder {
-    color: var(--gray-300);
+    color: var(--base-placeholder);
     filter: brightness(70%);
+}
+.fieldset input[type="text"]:focus {
+    background: var(--base-input-focus);
 }
 
 .fieldset input[type='time']::-webkit-calendar-picker-indicator,
@@ -46,20 +49,19 @@
 
     border: 1px solid transparent;
     border-radius: 8px;
-    color: var(--white);
     font-weight: 700;
     cursor: pointer;
 }
 
 .controls button:first-child {
-    background: var(--gray-400);
-    color: var(--gray-300);
+    background: var(--base-placeholder);
+    color: var(--base-title);
     filter: brightness(80%);
 }
 
 .controls button:last-child {
-    background: var(--gray-400);
-    color: var(--gray-200);
+    background: var(--purple);
+    color: var(--base-title);
     filter: brightness(100%);
  
     grid-column: 2;
@@ -80,12 +82,12 @@
     cursor: pointer;
     border-radius: 8px;
     transition: color ease 0.2s, background-color ease 0.2s;
-    background: #212121;
+    background: var(--base-input);
     color: var(--green-600);
 
 }
 
 .radioItem[data-state='checked'] {
     background: var(--green-600);
-    color: var(--gray-100);
+    color: var(--base-title);
 }

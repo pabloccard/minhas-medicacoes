@@ -5,18 +5,6 @@
     position: relative;
 }
 
-.container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background: rgb(13,13,13);
-    background: linear-gradient(180deg, rgba(13,13,13,1) 0%, rgba(26,26,26,1) 100%);
-    z-index: -100;
-}
-
 .selectedDate {
     display: flex;
     align-items: center;
@@ -25,7 +13,7 @@
 }
 
 .selectedDate strong {
-    color: var(--gray-200);
+    color: var(--base-title);
     font-size: 4rem;
 }
 
@@ -35,7 +23,7 @@
 }
 
 .selectedDate div span {
-    color: var(--gray-300);
+    color: var(--base-sidebar-label);
     text-transform: capitalize;
     line-height: 1.6;
 }
@@ -78,7 +66,7 @@
     height: 5.25rem;
     padding: 2rem;
 
-    background: var(--gray-500);
+    background: var(--base-card);
     border: 0;
     border-radius: 6px;
     cursor: pointer;
@@ -105,16 +93,15 @@
 
 .scheduledDay strong {
     text-transform: uppercase;
-    color: var(--gray-300);
+    color: var(--base-sidebar-label);
 }
 
-.active {
-    background: var(--green-500); 
-    transform: translateY(-10%);
+.scheduledDay.active {
+    background: var(--green-600); 
 }
 
 .scheduledDay.active strong {
-    color: var(--white);
+    color: var(--base-title);
 }
 
 .scheduledTimeContainer {
@@ -130,10 +117,10 @@
 }
 
 .scheduledTimeContainer table th {
-    background-color: var(--gray-500);
+    background-color: var(--base-card);
     padding: 0.75rem 0.5rem;
     text-align: left;
-    color: var(--gray-300);
+    color: var(--base-sidebar-label);
     font-size: 0.685rem;
     line-height: 1.6;
     text-transform: uppercase;
@@ -149,8 +136,8 @@
 }
 
 .scheduledTimeContainer table td {
-    background-color: var(--gray-500);
-    color: var(--gray-200);
+    background-color: var(--base-card);
+    color: var(--base-title);
     padding: 0.875rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.6;
@@ -161,8 +148,8 @@
     padding-left: 1.5rem;  
 }
 
-.scheduledTimeContainer table td:nth-child(2) {
-    color: var(--white);
+.scheduledTimeContainer table td:nth-child(3) {
+    color: var(--base-label);
 }
 
 .scheduledTimeContainer table td:last-child {

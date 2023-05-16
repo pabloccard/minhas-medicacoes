@@ -14,7 +14,7 @@
     width: 2.75rem;
     height: 2.75rem;
 
-    background: #212121;
+    background: var(--base-input);
     border-radius: 8px;
     cursor: pointer;
     border: 0;
@@ -28,5 +28,5 @@
 
 .value{
     font-weight: bold;
-    color: var(--white);
+    color: var(--base-title);
 }
