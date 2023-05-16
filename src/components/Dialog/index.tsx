@@ -4,7 +4,7 @@ import * as DialogRadix from '@radix-ui/react-dialog'
 import { IoCloseOutline } from 'react-icons/io5'
 
 import styles from './styles.module.css'
-import { MultStepForm } from '../MultStepForm'
+// import { MultStepForm } from '../MultStepForm'
 import { Form } from '../Form'
 
 export const Dialog = () => {
