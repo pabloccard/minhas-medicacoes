@@ -5,6 +5,7 @@ import { IoCloseOutline } from 'react-icons/io5'
 
 import styles from './styles.module.css'
 import { MultStepForm } from '../MultStepForm'
+import { Form } from '../Form'
 
 export const Dialog = () => {
   return (
@@ -18,7 +19,7 @@ export const Dialog = () => {
 
         <DialogRadix.Content className={styles.content}>
           <DialogRadix.Title>Nova medicação</DialogRadix.Title>
-          <MultStepForm />
+          <Form />
 
           <DialogRadix.Close asChild className={styles.close}>
             <button className={styles.closeButton}>
