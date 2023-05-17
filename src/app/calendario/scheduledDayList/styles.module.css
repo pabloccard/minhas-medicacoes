@@ -1,0 +1,26 @@
+.scheduledDayList {
+    padding-block: 4.25rem;
+}
+
+.scheduledDayList.activeSlide {
+    width: 100vw;
+    overflow: hidden;
+    padding-left: 2rem;
+    margin-left: -2rem;
+    position: relative;
+    
+    padding-right: 2rem;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+.slider.activeSlide {
+    justify-content: unset;
+    gap: unset;
+    /* overflow: visible !important; */
+}

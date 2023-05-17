@@ -1,0 +1,22 @@
+.selectedDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.selectedDate strong {
+    color: var(--base-title);
+    font-size: 4rem;
+}
+
+.selectedDate div {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectedDate div span {
+    color: var(--base-sidebar-label);
+    text-transform: capitalize;
+    line-height: 1.6;
+}

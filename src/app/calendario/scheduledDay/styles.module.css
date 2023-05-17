@@ -1,0 +1,48 @@
+.scheduledDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    width: 4.75rem;
+    height: 5.25rem;
+    padding: 2rem;
+
+    background: var(--base-card);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    /* transition: all ease-in-out 0.2s; */
+    position: relative;
+}
+
+.scheduledDay.active::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background: var(--purple);
+    filter: blur(20px);
+
+    z-index: -100;
+}
+
+.scheduledDay strong {
+    text-transform: uppercase;
+    color: var(--base-sidebar-label);
+}
+
+.scheduledDay.active {
+    background: var(--purple); 
+}
+
+.scheduledDay.active strong {
+    color: var(--base-title);
+}

@@ -1,0 +1,59 @@
+.scheduledTimeItem:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+.scheduledTimeItem:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.scheduledTimeItem td {
+    background-color: var(--base-card);
+    color: var(--base-title);
+    padding: 0.875rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.scheduledTimeItem td:first-child {
+    padding-left: 1.5rem;  
+}
+
+.scheduledTimeItem td:nth-child(3) {
+    color: var(--base-label);
+}
+
+.scheduledTimeItem td:last-child {
+    padding-right: 0.5rem;
+    color: #D1B86C;
+}
+
+.checkbox{
+    background-color: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: 2px solid var(--purple);
+}
+
+.checkbox[data-state='unchecked']:hover{
+    background: white;
+}
+
+.checkbox[data-state='checked'] {
+    background: var(--purple);
+}
+
+.checkbox[data-state='checked']:hover {
+    background: white;
+}
+
+.indicator {
+    /* font-size: 1rem; */
+    color: white;
+}
