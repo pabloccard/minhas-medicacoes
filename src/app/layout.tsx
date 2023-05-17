@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Header } from '@/components/Header'
+import { SchedulesContextProvider } from './contexts/scheduleContext/scheduleContextProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <body className={inter.className}>
         <Header />
-        {children}
+        <SchedulesContextProvider>{children}</SchedulesContextProvider>
       </body>
     </html>
   )

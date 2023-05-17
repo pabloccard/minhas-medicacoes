@@ -1,13 +1,29 @@
 import styles from './styles.module.css'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
-export const DayStepper = () => {
+
+type DayStepperProps = {
+  onChange: (...event: any[]) => void
+  value: number
+}
+
+export const DayStepper = ({ onChange, value }: DayStepperProps) => {
   return (
     <div className={styles.container}>
-      <button className={styles.action}>
+      <button
+        type="button"
+        className={styles.action}
+        onClick={() => onChange(value - 1)}
+      >
         <AiOutlineLeft />
       </button>
-      <span className={styles.value}>7 dias</span>
-      <button className={styles.action}>
+      <span className={styles.value}>
+        {value} {value > 1 ? 'dias' : 'dia'}
+      </span>
+      <button
+        type="button"
+        className={styles.action}
+        onClick={() => onChange(value + 1)}
+      >
         <AiOutlineRight />
       </button>
     </div>
