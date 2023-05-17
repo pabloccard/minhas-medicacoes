@@ -1,4 +1,3 @@
-import { DayStepper } from '../DayStepper'
 import styles from './styles.module.css'
 
 type StepProps = {
@@ -13,7 +12,6 @@ export const DurationStep = ({ changeStep, currentStep }: StepProps) => {
         <label htmlFor="name" className={styles.label}>
           Selecione a duração do tratamento
         </label>
-        <DayStepper />
       </fieldset>
 
       <div className={styles.controls}>

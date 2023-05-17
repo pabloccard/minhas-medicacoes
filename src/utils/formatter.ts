@@ -1,4 +1,4 @@
-import { format, formatISO9075 } from 'date-fns'
+import { format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 export default function dateFormatter() {
@@ -23,7 +23,7 @@ export default function dateFormatter() {
   }
 
   const formatToTime = (date: Date): string => {
-    return formatISO9075(date, { representation: 'time' })
+    return format(date, 'HH:mm')
   }
 
   return {

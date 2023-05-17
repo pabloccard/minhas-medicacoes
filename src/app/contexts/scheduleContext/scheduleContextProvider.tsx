@@ -1,6 +1,6 @@
 'use client'
 
-import { addDays, eachMinuteOfInterval, formatISO, isSameDay } from 'date-fns'
+import { addDays, eachMinuteOfInterval, isSameDay } from 'date-fns'
 import { ReactNode, useContext } from 'react'
 import { SchedulesContext } from '.'
 import { v4 as uuidV4 } from 'uuid'
@@ -42,15 +42,15 @@ export const SchedulesContextProvider = ({
         id: uuidV4(),
         name,
         ingested: false,
-        datetime: formatISO(schedule),
+        date_time: schedule.toString(),
       }
     })
     setSchedules((prev) => [...prev, ...newSchedules])
   }
 
   function findSchedules(date: Date) {
-    return schedules.filter(({ datetime }) => {
-      return isSameDay(new Date(datetime), date)
+    return schedules.filter(({ date_time }) => {
+      return isSameDay(new Date(date_time), date)
     })
   }
 

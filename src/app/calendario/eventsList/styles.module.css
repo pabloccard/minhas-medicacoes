@@ -5,9 +5,10 @@
 }
 
 .scheduledTimeContainer table {
-    width: 100%;
+    width: min(500px, 100%);
     border-collapse: collapse;
     border-spacing: 0 0.5rem;
+    margin: 0 auto;
 }
 
 .scheduledTimeContainer table th {

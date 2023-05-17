@@ -1,12 +1,21 @@
+import dateFormatter from '@/utils/formatter'
 import styles from './styles.module.css'
 
-export const SelectedDate = () => {
+type SelectedDateProps = {
+  selectedDate: Date
+}
+export const SelectedDate = ({ selectedDate }: SelectedDateProps) => {
+  const { formatToDay, formatToMonth, formatToWeekDay, formatToYear } =
+    dateFormatter()
+
   return (
     <div className={styles.selectedDate}>
-      <strong>7</strong>
+      <strong>{formatToDay(selectedDate)}</strong>
       <div>
-        <span>Terça</span>
-        <span>Abril | 2021</span>
+        <span>{formatToWeekDay(selectedDate)}</span>
+        <span>
+          {formatToMonth(selectedDate)} | {formatToYear(selectedDate)}
+        </span>
       </div>
     </div>
   )

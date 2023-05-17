@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import styles from './styles.module.css'
 
-type ScheduledTimeTableProps = {
+type EventsListProps = {
   children: ReactNode
 }
 
-export const ScheduledTimeTable = ({ children }: ScheduledTimeTableProps) => {
+export const EventsList = ({ children }: EventsListProps) => {
   return (
     <div className={styles.scheduledTimeContainer}>
       <table className={styles.scheduledDayTable}>

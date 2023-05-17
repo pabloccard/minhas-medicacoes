@@ -6,7 +6,7 @@ type ScheduledDayListProps = {
   children: ReactNode
 }
 
-export const ScheduledDayList = ({ children }: ScheduledDayListProps) => {
+export const ScheduledDateList = ({ children }: ScheduledDayListProps) => {
   const [activeSlide, setActiveSlide] = useState(false)
 
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -24,8 +24,8 @@ export const ScheduledDayList = ({ children }: ScheduledDayListProps) => {
     breakpoints: {
       '(min-width: 1024px)': {
         slides: {
-          perView: 2.2,
-          spacing: 16,
+          perView: 'auto',
+          spacing: activeSlide ? 8 : 0,
         },
       },
     },
