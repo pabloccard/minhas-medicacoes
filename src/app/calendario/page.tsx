@@ -14,9 +14,13 @@ import { useState } from 'react'
 
 export default function Calendario() {
   const { schedules } = useScheduleContext()
-  const [selectedDate, setSelectedDate] = useState<Date>(
-    new Date(schedules[0].date_time) || new Date(),
-  )
+  const [selectedDate, setSelectedDate] = useState<Date>(() => {
+    if (schedules.length > 0) {
+      return new Date(schedules[0].date_time)
+    } else {
+      return new Date()
+    }
+  })
 
   const scheduledDates: Date[] = schedules.reduce(
     (dates: Date[], { date_time }) => {

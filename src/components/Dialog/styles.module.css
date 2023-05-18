@@ -20,7 +20,7 @@
     text-transform: uppercase;
     padding: 0.875rem 1.5rem;
     font-weight: bold;
-    background: var(--green-600);
+    background: var(--secondary);
     border: 0;
     border-radius: 999px;
     color: var(--base-title);
@@ -28,7 +28,7 @@
 }
 
 .trigger:hover {
-    background: var(--green-500);
+    background: var(--primary-light);
     transition: background-color 0.2s ease-in-out;
 }
 

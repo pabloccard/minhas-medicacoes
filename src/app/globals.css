@@ -1,4 +1,10 @@
 :root {
+  --primary: #5E60CE;
+  --primary-light: #8284FA;
+
+  --secondary: #1E6F9F;
+  --secondary-light: #4EA8DE;
+  
   --base-background: #16171B;
   /* ---base-title: #fff; */
   --a: #F1F3F5;
@@ -40,6 +46,7 @@
 
 body {
   background: var(--base-background);
+ 
   color: var(--base-subtitle);
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;

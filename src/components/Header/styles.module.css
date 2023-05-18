@@ -46,7 +46,7 @@
 }
 
 .link.active  {
-    color: var(--green-500);
+    color: var(--primary);
 }
 
 @media(min-width:768px) {
@@ -84,7 +84,7 @@
 
     .link.active {
         color: var(--base-title);
-        border-bottom-color: var(--green-500);
+        border-bottom-color: var(--primary);
     }
 }
 
